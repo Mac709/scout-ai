@@ -9,7 +9,7 @@ load_dotenv()
 
 # ページ設定
 st.set_page_config(
-    page_title="HRdev スカウトメッセージ生成AI",
+    page_title="Scout AI - スカウトメッセージ生成",
     page_icon="🎯",
     layout="wide"
 )
@@ -35,7 +35,7 @@ def generate_scout_message(
 ) -> str:
     """Claude APIを使ってスカウトメッセージを生成"""
 
-    prompt = f"""あなたは採用支援会社HRdevの優秀なリクルーターです。以下の候補者情報をもとに、魅力的でパーソナライズされたスカウトメッセージを作成してください。
+    prompt = f"""あなたは採用支援の優秀なリクルーターです。以下の候補者情報をもとに、魅力的でパーソナライズされたスカウトメッセージを作成してください。
 
 【候補者情報】
 - 名前: {candidate_name}様
@@ -72,7 +72,7 @@ def generate_scout_message(
 
 def main():
     # ヘッダー
-    st.title("🎯 HRdev スカウトメッセージ生成AI")
+    st.title("🎯 Scout AI - スカウトメッセージ生成")
     st.markdown("**Claude API を活用した、パーソナライズされたスカウトメッセージ自動生成ツール**")
     st.divider()
 
@@ -133,7 +133,7 @@ def main():
 
         target_company = st.text_input(
             "募集企業名",
-            placeholder="例: 株式会社ログラス",
+            placeholder="例: 株式会社〇〇",
             help="スカウト先の企業名"
         )
 
@@ -181,7 +181,7 @@ def main():
 
     # フッター
     st.divider()
-    st.caption("Powered by Claude API (Sonnet 4.5) | 株式会社HRdev")
+    st.caption("Powered by Claude API (Sonnet 4.5)")
 
 if __name__ == "__main__":
     main()

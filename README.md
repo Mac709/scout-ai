@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯 HRdev Scout AI
+# 🎯 Scout AI
 
 ### AI-Powered Personalized Scout Message Generator
 
@@ -63,14 +63,14 @@ Claude Sonnet 4.5による高品質でパーソナライズされたスカウト
 
 **募集ポジション**
 ```
-企業: 株式会社ログラス
+企業: 株式会社〇〇
 ポジション: プロダクトエンジニア（バックエンド）
 ```
 
 **生成されるメッセージ（例）**
 > 山田太郎様
 >
-> 突然のご連絡失礼いたします。HRdevの〇〇と申します。
+> 突然のご連絡失礼いたします。〇〇と申します。
 >
 > 山田様のPythonとReactを活用したフルスタック開発のご経験、特にAWSとDockerを用いたモダンなインフラ構築のスキルに大変注目しております...
 
@@ -87,8 +87,8 @@ Claude Sonnet 4.5による高品質でパーソナライズされたスカウト
 
 ```bash
 # 1. リポジトリをクローン
-git clone git@github.com:Mac709/hrdev-scout-ai.git
-cd hrdev-scout-ai
+git clone <repository-url>
+cd scout-ai
 
 # 2. 仮想環境を作成
 python -m venv venv
@@ -160,7 +160,7 @@ streamlit run app.py
 ## 📂 プロジェクト構成
 
 ```
-hrdev-scout-ai/
+scout-ai/
 ├── app.py              # メインアプリケーション
 ├── requirements.txt    # 依存パッケージ
 ├── .env.example        # 環境変数サンプル
@@ -179,7 +179,7 @@ hrdev-scout-ai/
 
 ```python
 # app.py L34-54
-prompt = f"""あなたは採用支援会社HRdevの優秀なリクルーターです。
+prompt = f"""あなたは採用支援の優秀なリクルーターです。
 以下の候補者情報をもとに、魅力的でパーソナライズされた
 スカウトメッセージを作成してください。
 ...
@@ -240,7 +240,5 @@ model="claude-opus-4-6"  # より高品質
 <div align="center">
 
 **Powered by [Claude API](https://www.anthropic.com/) (Sonnet 4.5)**
-
-Made with ❤️ by [Mac709](https://github.com/Mac709)
 
 </div>
